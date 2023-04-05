@@ -21,8 +21,8 @@ namespace WPFNavigationDemo
     /// </summary>
     public partial class PageB : Page
     {
-        DispatcherTimer timer;
-        TimeSpan timeSpan;
+        MainWindow window = (MainWindow)Application.Current.MainWindow;
+   
         public PageB()
         {
             InitializeComponent();
@@ -30,29 +30,12 @@ namespace WPFNavigationDemo
         }
         private void SetUp()
         {
-            Counter();
-            PlayerName.Text = MainWindow.player.Name;
+            PlayerName.Text = window.player.Name;
         }
-        private void Counter()
+
+        private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            //DispatchTimer example by kmatyaszek (https://stackoverflow.com/users/1410998/kmatyaszek)
-            timeSpan = TimeSpan.FromSeconds(5);
-
-            timer = new DispatcherTimer(
-                new TimeSpan(0, 0, 1),
-                DispatcherPriority.Normal,
-                delegate
-                {
-                    if (timeSpan == TimeSpan.Zero)
-                    {
-                        timer.Stop();
-                        this.NavigationService.Navigate(new Uri("PageA.xaml", UriKind.Relative));
-                    }
-                    timeSpan = timeSpan.Add(TimeSpan.FromSeconds(-1));
-                },
-                Application.Current.Dispatcher);
-
-            timer.Start();
+            NavigationService.Navigate(new Uri("PageA.xaml", UriKind.Relative));
         }
     }
 }

@@ -21,6 +21,7 @@ namespace WPFNavigationDemo
     /// </summary>
     public partial class PageA : Page
     {
+        MainWindow window = (MainWindow)Application.Current.MainWindow;
         DispatcherTimer timer;
         TimeSpan timeSpan;
 
@@ -32,19 +33,20 @@ namespace WPFNavigationDemo
         private void SetUp()
         {
             Counter();
-            PlayerName.Text = MainWindow.player.Name;
+            PlayerName.Text = window.player.Name;
         }
 
         private void Counter()
         {
             //DispatchTimer example by kmatyaszek (https://stackoverflow.com/users/1410998/kmatyaszek)
             timeSpan = TimeSpan.FromSeconds(5);
-
+            
             timer = new DispatcherTimer(
                 new TimeSpan(0, 0, 1),
                 DispatcherPriority.Normal,
                 delegate
                 {
+                    Timer.Text = timeSpan.ToString("c");
                     if (timeSpan == TimeSpan.Zero)
                     {
                         timer.Stop();

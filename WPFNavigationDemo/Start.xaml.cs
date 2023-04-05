@@ -20,6 +20,7 @@ namespace WPFNavigationDemo
     /// </summary>
     public partial class Start : Page
     {
+        MainWindow window = (MainWindow)Application.Current.MainWindow;
         public Start()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace WPFNavigationDemo
         {
             if (PlayerName.Text != "")
             {
-                MainWindow.player.Name = PlayerName.Text;
+                window.player.Name = PlayerName.Text;
                
             }
             this.NavigationService.Navigate(new Uri("PageA.xaml", UriKind.Relative));

@@ -20,7 +20,7 @@ namespace WPFNavigationDemo
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static Player player = new Player();
+        public Player player = new Player();
         public MainWindow()
         {
             InitializeComponent();

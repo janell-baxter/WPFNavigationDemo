@@ -12,6 +12,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="173,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="191"><Run Text="this is page A"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="When the countdown reaches 0, Page B will load automatically"/></TextBlock>
         <Label Content="A" HorizontalAlignment="Left" Margin="45,97,0,0" VerticalAlignment="Top" Height="170" Width="128" FontSize="72"/>
         <TextBlock x:Name="PlayerName" HorizontalAlignment="Left" Margin="650,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBlock x:Name="Timer" HorizontalAlignment="Left" Margin="45,16,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

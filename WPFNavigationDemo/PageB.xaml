@@ -9,9 +9,10 @@
       Title="PageB">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="190,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="238"><Run Text="this is page B"/><LineBreak/><Run/><LineBreak/><Run Text="When the countdown reaches 0, Page A will load automatically"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="190,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="238"><Run Text="this is page B"/><LineBreak/><Run/><LineBreak/></TextBlock>
         <Label Content="B" HorizontalAlignment="Left" Margin="37,78,0,0" VerticalAlignment="Top" Height="170" Width="128" FontSize="72"/>
         <TextBlock x:Name="PlayerName" HorizontalAlignment="Left" Margin="650,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <Button x:Name="PlayButton" Content="Play Again" HorizontalAlignment="Left" Margin="190,275,0,0" VerticalAlignment="Top" Height="26" Width="92" Click="PlayButton_Click"/>
 
     </Grid>
 </Page>
